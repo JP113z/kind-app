@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Tiger",
+  "quotes": [
+    { "id": "q01", "text": "A veces avanzar también significa cambiar de dirección.", "image": "img/quotes/q01.png", "palette": "menta" },
+    { "id": "q02", "text": "Pequeños actos. Grandes cambios.", "image": "img/quotes/q02.png", "palette": "arena" },
+    { "id": "q03", "text": "Hoy basta con dar un paso. Mañana damos otro.", "image": "img/quotes/q03.png", "palette": "verde" },
+    { "id": "q04", "text": "Ser amable contigo también cuenta como progreso.", "image": "img/quotes/q04.png", "palette": "sol" },
+    { "id": "q05", "text": "Descansar no es rendirse, es tomar impulso.", "image": "img/quotes/q05.png", "palette": "menta" },
+    { "id": "q06", "text": "Lo que hoy te cuesta, mañana lo harás sin pensarlo.", "image": "img/quotes/q06.png", "palette": "arena" },
+    { "id": "q07", "text": "No tienes que tenerlo todo claro para empezar.", "image": "img/quotes/q07.png", "palette": "verde" },
+    { "id": "q08", "text": "Tu ritmo también es un ritmo válido.", "image": "img/quotes/q08.png", "palette": "sol" },
+    { "id": "q09", "text": "Las raíces crecen en silencio antes de que se vea el árbol.", "image": "img/quotes/q09.png", "palette": "menta" },
+    { "id": "q10", "text": "Regálale al día de hoy una cosa buena, por pequeña que sea.", "image": "img/quotes/q10.png", "palette": "arena" },
+    { "id": "q11", "text": "Equivocarse es parte del camino, no el final del camino.", "image": "img/quotes/q11.png", "palette": "verde" },
+    { "id": "q12", "text": "Si hoy solo puedes con poco, que ese poco sea con cariño.", "image": "img/quotes/q12.png", "palette": "sol" },
+    { "id": "q13", "text": "La constancia gana más batallas que la prisa.", "image": "img/quotes/q13.png", "palette": "menta" },
+    { "id": "q14", "text": "Mereces la misma paciencia que le das a los demás.", "image": "img/quotes/q14.png", "palette": "arena" }
+  ]
+}

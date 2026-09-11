@@ -1,0 +1,254 @@
+/* ---------------------------------------------------------------
+   Kind — hoja de estilos
+   Paleta tomada del manual de marca:
+     café #7D604A · arena #ECE1BE · crema #F6F4EC
+     verde #8EAB1C · menta #BEE6DD · ámbar #FFB300
+   Tipografía: Nunito (variable) para todo; la itálica para las frases.
+----------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("assets/fonts/Nunito.ttf") format("truetype");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("assets/fonts/Nunito-Italic.ttf") format("truetype");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --brown: #7d604a;
+  --brown-ink: #5c4636;
+  --sand: #ece1be;
+  --cream: #f6f4ec;
+  --green: #8eab1c;
+  --green-dark: #7a941a;
+  --mint: #bee6dd;
+  --amber: #ffb300;
+  --card: #fffefa;
+  --shadow: 0 8px 24px rgba(125, 96, 74, 0.13);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0;
+  padding: 0 0 env(safe-area-inset-bottom);
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  color: var(--brown-ink);
+  background: var(--cream);
+  background-image:
+    radial-gradient(120% 60% at 50% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream) 55%, #f2efe1 100%);
+  background-attachment: fixed;
+  overscroll-behavior-y: contain;
+}
+
+/* ------------------------------ cabecera ----------------------- */
+.topbar {
+  padding: calc(24px + env(safe-area-inset-top)) 20px 6px;
+  text-align: center;
+}
+.logo { width: 148px; height: auto; display: block; margin: 0 auto; }
+.tagline {
+  margin: 6px 0 0;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--brown);
+  opacity: 0.85;
+}
+
+main { padding: 12px 16px 8px; max-width: 560px; margin: 0 auto; }
+
+/* ------------------------------ tarjetas ----------------------- */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 18px 20px;
+  margin: 0 0 16px;
+}
+.card--today { padding-bottom: 14px; }
+.card__title {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: 0.01em;
+}
+.card__hint {
+  margin: 0 0 14px;
+  font-size: 14.5px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--brown);
+  opacity: 0.9;
+}
+
+/* ------------------------------ frase de hoy ------------------- */
+.today__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  background: var(--mint);
+}
+.today__text {
+  margin: 14px 4px 0;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--brown-ink);
+}
+/* ------------------------------ filas / controles -------------- */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid rgba(125, 96, 74, 0.12);
+}
+.row:first-of-type { border-top: 0; }
+.row__label { font-weight: 700; font-size: 16px; }
+
+.switch { position: relative; display: inline-block; }
+.switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch__track {
+  display: block;
+  width: 56px;
+  height: 32px;
+  border-radius: 999px;
+  background: #ded8c6;
+  transition: background 0.18s ease;
+}
+.switch__thumb {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.18s ease;
+}
+.switch input:checked + .switch__track { background: var(--green); }
+.switch input:checked + .switch__track .switch__thumb {
+  transform: translateX(24px);
+  background: radial-gradient(circle at 50% 45%, #ffd400 0%, #fff08a 100%);
+}
+
+.time {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--brown-ink);
+  background: var(--cream);
+  border: 2px solid rgba(125, 96, 74, 0.18);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.time:focus { outline: none; border-color: var(--green); }
+
+.status {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--brown);
+  background: rgba(190, 230, 221, 0.45);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.status--warn { background: rgba(255, 179, 0, 0.18); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.btn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 15px;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn:active { transform: scale(0.97); }
+.btn--primary { background: var(--green); color: #fff; }
+.btn--ghost { background: var(--sand); color: var(--brown-ink); }
+
+/* ------------------------------ widget ------------------------- */
+.widget-demo {
+  background: linear-gradient(160deg, #cfe4f5 0%, #e7dcf2 100%);
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.widget-demo__img {
+  width: 62%;
+  max-width: 190px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  display: block;
+  margin: 0 auto;
+}
+.widget-demo__caption {
+  display: block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #4a3f5c;
+  opacity: 0.75;
+}
+
+.steps {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--brown);
+}
+.steps b { color: var(--brown-ink); }
+
+/* ------------------------------ varios ------------------------- */
+.webnote {
+  margin: 0 0 16px;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--brown);
+  background: rgba(255, 179, 0, 0.16);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 4px 16px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brown);
+  opacity: 0.75;
+}
+.foot__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, #ffd400 0%, #fff08a 100%);
+}

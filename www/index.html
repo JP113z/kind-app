@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F6F4EC" />
+<title>Kind</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="assets/img/icon-192.png" />
+<link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <img class="logo" src="assets/img/kind-logo.png" alt="Kind" />
+  <p class="tagline">Peque&ntilde;os actos. Grandes cambios.</p>
+</header>
+
+<main>
+
+  <!-- Frase del día -->
+  <section class="card card--today">
+    <h2 class="card__title">La frase de hoy</h2>
+    <div class="today">
+      <img id="todayImage" class="today__img" alt="" />
+      <p id="todayText" class="today__text"></p>
+    </div>
+  </section>
+
+  <!-- Notificaciones -->
+  <section class="card">
+    <h2 class="card__title">Tu recordatorio diario</h2>
+    <p class="card__hint">Cada d&iacute;a a la hora que elijas, Tiger te manda la frase del d&iacute;a.</p>
+
+    <div class="row">
+      <label class="row__label" for="notifSwitch">Notificaci&oacute;n diaria</label>
+      <label class="switch">
+        <input type="checkbox" id="notifSwitch" />
+        <span class="switch__track"><span class="switch__thumb"></span></span>
+      </label>
+    </div>
+
+    <div class="row">
+      <label class="row__label" for="notifTime">Hora</label>
+      <input type="time" id="notifTime" class="time" value="08:00" />
+    </div>
+
+    <p id="notifStatus" class="status"></p>
+
+    <div class="actions">
+      <button id="permBtn" class="btn btn--primary" hidden>Permitir notificaciones</button>
+      <button id="exactBtn" class="btn btn--ghost" hidden>Permitir alarmas exactas</button>
+      <button id="testBtn" class="btn btn--ghost">Enviar una de prueba</button>
+    </div>
+  </section>
+
+  <!-- Widget -->
+  <section class="card">
+    <h2 class="card__title">Activa el widget</h2>
+    <p class="card__hint">
+      El coraz&oacute;n de Kind es el widget: la frase del d&iacute;a siempre visible en tu pantalla de
+      inicio, sin tener que abrir nada. Solo hay que agregarlo una vez.
+    </p>
+
+    <div class="widget-demo">
+      <img id="widgetPreview" class="widget-demo__img" alt="Vista previa del widget de Kind" />
+      <span class="widget-demo__caption">As&iacute; se ve en tu pantalla de inicio</span>
+    </div>
+
+    <button id="pinBtn" class="btn btn--primary" hidden>Agregar el widget</button>
+
+    <ol class="steps">
+      <li>Manten&eacute; presionado un espacio vac&iacute;o de tu pantalla de inicio.</li>
+      <li>Toc&aacute; <b>Widgets</b>.</li>
+      <li>Busc&aacute; <b>Kind</b> en la lista.</li>
+      <li>Arrastr&aacute; el widget <b>Frase del d&iacute;a</b> a donde quieras.</li>
+    </ol>
+  </section>
+
+  <p id="webNote" class="webnote" hidden>
+    Est&aacute;s viendo Kind en el navegador. El widget y el recordatorio diario
+    funcionan al instalar la app de Android.
+  </p>
+
+</main>
+
+<footer class="foot">
+  <span class="foot__dot"></span>
+  <span>Kind &middot; una frase amable por d&iacute;a</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

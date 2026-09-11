@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- El sol de Kind, en silueta: los iconos pequeños de notificación
+     deben ser monocromos (el sistema los pinta de un solo color). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,4.5c4.14,0 7.5,3.36 7.5,7.5s-3.36,7.5 -7.5,7.5 -7.5,-3.36 -7.5,-7.5 3.36,-7.5 7.5,-7.5z" />
+</vector>

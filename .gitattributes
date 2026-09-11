@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# El wrapper de Gradle debe conservar finales de línea LF para correr en Linux/macOS
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Binarios
+*.png binary
+*.jpg binary
+*.ttf binary
+*.jar binary

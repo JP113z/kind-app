@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kind</string>
+    <string name="widget_label">Frase del día</string>
+    <string name="widget_description">La frase amable de hoy, siempre a la vista.</string>
+    <string name="channel_name">Frase del día</string>
+    <string name="channel_description">Un recordatorio diario con la frase de Tiger.</string>
+    <string name="notif_title">Kind</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta del manual de marca de Kind -->
+    <color name="kind_brown">#7D604A</color>
+    <color name="kind_sand">#ECE1BE</color>
+    <color name="kind_cream">#F6F4EC</color>
+    <color name="kind_green">#8EAB1C</color>
+    <color name="kind_mint">#BEE6DD</color>
+    <color name="kind_amber">#FFB300</color>
+</resources>
